@@ -1,0 +1,40 @@
+.main-content{
+    margin: 1em 1em auto 1em;
+}
+/* table {
+    width: 100%;
+  }
+th{
+    background: #03e049;
+    font-weight: bold;
+    font-size: 20px;
+} */
+  
+th.mat-sort-header-sorted {
+color: black;
+}
+
+/* Mat-Card css */
+/* .incident-card{
+    max-width: 200px;
+} */
+
+mat-grid-list{
+    max-width: auto;
+    margin: 1em 1em auto 1em;
+}
+.example-card {
+    max-width: 250px;
+    max-height: 300px;
+  }
+
+  .mat-raised-button{
+    background: green;
+    color: white;
+}
+  
+  .mat-header {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-size: cover;
+    /* background: yellowgreen; */
+    }
