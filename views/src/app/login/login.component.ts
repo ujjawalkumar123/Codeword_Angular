@@ -20,12 +20,12 @@ export class LoginComponent implements OnInit {
       console.log(data.value);
       this.userService
         .validateEmail(data.value)
-        .subscribe(res => {
+        .subscribe((res : any) => {
           console.log(res)
           if (res && res.message) {
             this.userService
               .signin(data.value)
-              .subscribe(res => {
+              .subscribe((res : any) => {
                 localStorage.setItem('token', res.token)
                 localStorage.setItem('status', res.isInstructor)
                 this.router.navigate(['/dashboard'])

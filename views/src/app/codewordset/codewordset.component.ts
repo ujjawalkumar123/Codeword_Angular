@@ -109,7 +109,7 @@ export class CodewordsetComponent implements OnInit {
 // Get call
   fetchData() {
     this.codewordsetService.getCodewordSet()
-      .subscribe((response) => {
+      .subscribe((response : any) => {
         let tempDataset = response.data;
         this.codewordsetService.getCodewords(tempDataset)
           .subscribe((response) => {

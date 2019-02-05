@@ -28,6 +28,8 @@ import { CodewordsComponent } from './codewords/codewords.component';
 import { AddCourseComponent, AddCourseSnackBarComponent } from './add-course/add-course.component';
 import { CourseComponent } from './course/course.component';
 import { HttpClientModule } from '@angular/common/http';
+// import { RegisterComponent } from './register/register.component';
+// import { PasswordComponent } from './password/password.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddCourseComponent,
     AddCourseSnackBarComponent,
     CourseComponent
+    // RegisterComponent,
+    // PasswordComponent
     
   ],
   imports: [
