@@ -7,14 +7,14 @@ import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { CodewordsetComponent } from './codewordset/codewordset.component';
 import { CodewordsComponent } from './codewords/codewords.component';
 import { CourseComponent } from './course/course.component';
-// import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './register/register.component';
 // import { PasswordComponent } from './password/password.component';
 
 const routes: Routes = [
   // { path: 'start', component: AppComponent },
   { path: 'login' , component: LoginComponent },
   { path: 'user' , component: UserComponent },
-  // { path: 'register' , component: RegisterComponent },
+  { path: 'register' , component: RegisterComponent },
   // { path: 'password' , component: PasswordComponent },
   { path: 'codewords' , component: CodewordsComponent },
   { path: 'codewordset' , component: CodewordsetComponent },

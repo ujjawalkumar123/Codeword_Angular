@@ -1,0 +1,52 @@
+<mat-card class="mat-elevation-z8">
+  <form class="example-form" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+      <h2>Register to Codeword App</h2>
+      <p class="mat-body-2" *ngIf="errFlag">Enter both email and password</p>
+      
+      <mat-form-field class="example-full-width">
+      <input 
+        matInput 
+        type="text" 
+        [ngModel]="email" 
+        name="email" 
+        #emailID="ngModel" 
+        placeholder="Email" 
+        required>
+      </mat-form-field>
+      <br>
+      
+      <mat-form-field class="example-full-width">
+      <input 
+        matInput
+        type="password" 
+        [ngModel]="password" 
+        name="password" 
+        #pwd="ngModel"
+        placeholder="Password" 
+        required>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input 
+          matInput
+          type="password" 
+          [ngModel]="password" 
+          name="password" 
+          #pwd="ngModel"
+          placeholder="Confirm Password" 
+          required>
+        </mat-form-field>
+        <br>
+      
+      <mat-toolbar>
+          <p id="quest">Already have an account?
+              <a mat-button routerLink="/">Login</a></p>
+        <span class="spacer"></span>
+        <!-- <button class="btn-cancel" mat-raised-button (click)="rowClicked(row)">Cancel</button> -->
+        <button class="btn-create" mat-raised-button>Register</button>
+      </mat-toolbar>
+    </form>
+    
+</mat-card>
+
+  
