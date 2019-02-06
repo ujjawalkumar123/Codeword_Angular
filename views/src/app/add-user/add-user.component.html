@@ -21,7 +21,7 @@
       required>
     </mat-form-field>
     <br>
-    <input type="file">
+    <input (change)="previewFiles($event)" type="file">
     <br>
     <br>
     <mat-toolbar class="alert-msg"><p>No File is uploaded. Waiting for user to upload the CodeWord Set.</p></mat-toolbar>

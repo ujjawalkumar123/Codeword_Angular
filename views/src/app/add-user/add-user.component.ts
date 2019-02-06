@@ -24,6 +24,11 @@ export class AddUserComponent implements OnInit {
   ngOnInit() {
   }
 
+  previewFiles(event : any){
+    let files = event.target.files;
+
+  }
+
   save(data) {
     if (data.valid) {
       console.log(data.value);
