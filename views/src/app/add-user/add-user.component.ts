@@ -4,6 +4,7 @@ import { Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CodewordsetService } from 'src/app/services/codewordset.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-user',
@@ -16,9 +17,9 @@ export class AddUserComponent implements OnInit {
   adduser = '';
   isFileUploaded = false;
   codeWordCount = 0;
-  constructor(public dialogRef: MatDialogRef<AddUserComponent>,
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<AddUserComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
-    public snackBar: MatSnackBar, private codeWordSetService: CodewordsetService) {
+    public snackBar: MatSnackBar,   private codeWordSetService: CodewordsetService) {
     this.adduser = { ...data };
   }
 
@@ -89,7 +90,24 @@ export class AddUserComponent implements OnInit {
     this.dialogRef.close()
   }
 
+  // onNoClick(): void {
+  //   this.dialogRef.close()}
+
+  openRulesDialog(): void {
+    const dialogRef = this.dialog.open(HintDialog, {
+      width: '350px',
+      // data: {name: this.name, animal: this.animal}
+    });
+
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+      // this.animal = result});
+    ;
+  }
+
 }
+
+
 
 @Component({
   selector: 'snack-bar-component-add-user',
@@ -101,3 +119,17 @@ export class AddUserComponent implements OnInit {
   `],
 })
 export class AddUserSnackBarComponent { }
+
+@Component({
+  selector: 'hint-dialog',
+  templateUrl: 'hint-dialog.html',
+})
+export class HintDialog {
+
+
+  // constructor(
+  //   public dialogRef: MatDialogRef<HintDialog>,
+  //   ) {}
+   
+ 
+  }

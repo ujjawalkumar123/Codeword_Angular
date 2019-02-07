@@ -20,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
-import { AddUserComponent, AddUserSnackBarComponent } from './add-user/add-user.component';
+import { AddUserComponent, AddUserSnackBarComponent, HintDialog } from './add-user/add-user.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CodewordsetComponent } from './codewordset/codewordset.component';
@@ -41,6 +41,7 @@ import { RegisterComponent } from './register/register.component';
     AddUserComponent,
     NavBarComponent,
     AddUserSnackBarComponent,
+    HintDialog,
     DashboardComponent,
     CodewordsetComponent,
     CodewordsComponent,
@@ -75,6 +76,7 @@ import { RegisterComponent } from './register/register.component';
   entryComponents: [
     AddUserComponent,
     AddUserSnackBarComponent,
+    HintDialog,
     AddCourseComponent,
     AddCourseSnackBarComponent
     

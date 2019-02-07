@@ -70,42 +70,6 @@ export class CodewordsetComponent implements OnInit {
 
   }
 
-   
-
-// Post call
-  // saveData() {
-  //   let data = new FormData(document.querySelector('form'))
-  //   let sendData = {
-  //     CodeWordSetName: data.get('dataSetName')
-  //   }
-  //   let sendData2 = {
-  //     CodeWordSetName: data.get('dataSetName'),
-  //     // Codewords: this.tcodeWordSetData
-  //   }
-  //   this.codewordsetService.saveCodewordSet(data)
-  //     .subscribe((response) => {
-  //       let tempDataset = response.data;
-  //       this.codewordsetService.getCodewords(tempDataset)
-  //         .subscribe((response) => {
-  //           let resData = response['data'];
-  //           let dataT = []
-  //           for(var k in resData){
-  //             dataT.push({
-  //               codeWordSetName: k,
-  //                 count: resData[k].length,
-  //                 items : resData[k]
-  //             })
-  //           }
-  //           console.log(dataT)
-  //           this.dataSource.data =  dataT;
-            
-  //           this.dataSource.sort = this.sort;
-  //           this.dataSource.paginator = this.paginator;
-  //         })
-
-  //     });
-  // }
-
 // Get call
   fetchData() {
     this.codewordsetService.getCodewordSet()
