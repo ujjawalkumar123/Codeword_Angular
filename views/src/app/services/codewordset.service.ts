@@ -32,9 +32,7 @@ export class CodewordsetService {
     }
 
     saveCodewordSet(data) {
-        return this.httpclient.post("http://localhost:3000/codeword/addcodewordset", {
-            sendData: data
-          } ,{
+        return this.httpclient.post("http://localhost:3000/codeword/addcodewordset",data ,{
             headers: {
                 token: window.localStorage.getItem('token')
             }
@@ -42,9 +40,7 @@ export class CodewordsetService {
     }
 
     saveCodewords(data) {
-        return this.httpclient.post("http://localhost:3000/codeword/addnewcodewords", {
-            sendData2: data
-          } ,{
+        return this.httpclient.post("http://localhost:3000/codeword/addnewcodewords",data ,{
             headers: {
                 token: window.localStorage.getItem('token')
             }
