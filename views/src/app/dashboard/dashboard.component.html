@@ -28,18 +28,53 @@
   </mat-card> -->
   
   <!-- New Mat card -->
-  <mat-grid-list cols="4" rowHeight="200px">
+  <mat-grid-list cols="4" rowHeight="350px">
     <mat-grid-tile *ngFor="let element of elements">
 
       <mat-card class="example-card">
         <mat-card-header>
           <h3> {{ element.heading }}</h3>          
         </mat-card-header>
+
+        
         <mat-card-content>
+            <mat-toolbar>
           <p>
-            {{ element.content }}
+            {{ element.content }}</p>
+
+            <span class="spacer"></span>
+            <p>
+            {{ element.content2 }}
           </p>
+        </mat-toolbar>
         </mat-card-content>
+        <br>
+        <mat-card-content>
+            <mat-toolbar>
+          <p>
+            {{ element.content3 }}</p>
+
+            <span class="spacer"></span>
+            <p>
+            {{ element.content4 }}
+          </p>
+        </mat-toolbar>
+        </mat-card-content>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
         <!-- <mat-card-actions>
           <button mat-button>LIKE</button>
           <button mat-button>SHARE</button>

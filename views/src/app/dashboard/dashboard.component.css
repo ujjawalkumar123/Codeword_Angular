@@ -24,7 +24,7 @@ mat-grid-list{
     margin: 1em 1em auto 1em;
 }
 .example-card {
-    max-width: 250px;
+    max-width: 350px;
     max-height: 300px;
   }
 
@@ -37,4 +37,8 @@ mat-grid-list{
     /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
     background-size: cover;
     /* background: yellowgreen; */
+    }
+
+    .spacer{
+        flex: 1 1 auto;
     }

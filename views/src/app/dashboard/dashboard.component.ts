@@ -2,8 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { AddCourseComponent } from 'src/app/add-course/add-course.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ViewChild } from '@angular/core';
 
+import { DashboardService } from 'src/app/services/dashboard.service';
+import { MatTableDataSource } from '@angular/material/table';
 
+// export interface PeriodicElement {
+//   courseName: '',
+//   startDate: '',
+//   endDate: '',
+//   startSurveyurldata: '',
+//   endSurveyurldata: '',
+//   CodeWordSetName: '',
+//   file: '',
+//   codeWordSetData: '',
+//   coursesData: '',
+//   selectedCourse: '',
+//   codeWordSetCount: ''
+// }
 
 
 @Component({
@@ -12,27 +28,46 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  // data: string[] = ['name', 'count', 'btn'];
+
+  // elements: Element[];
+
+  //  dataSource = new MatTableDataSource;
 
   elements = [
-    { heading: "Heading 1", content:"First sem"},
-    { heading: "Heading 2", content:"Second sem"},
-    { heading: "Heading 3", content:"Third sem"},
-    { heading: "Heading 4", content:"Forth sem"},
-    { heading: "Heading 5", content:"Fifth sem"},
-    { heading: "Heading 6", content:"Sixth sem"},
-  ]
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    { heading: "Heading 1", content:"2019-02-10", content2:"2019-02-10", content3:"Start URL", content4:"End URL"},
+    
+    // { heading: "Heading 2", content:"Second sem"},
+    // { heading: "Heading 3", content:"Third sem"},
+    // { heading: "Heading 4", content:"Forth sem"},
+    // { heading: "Heading 5", content:"Fifth sem"},
+    // { heading: "Heading 6", content:"Sixth sem"},
+   ]
   
 
-  constructor(public dialog: MatDialog, private router: Router) { }
+  constructor(public dialog: MatDialog, private router: Router, private dashboardService: DashboardService) { }
 
   
 
   ngOnInit() {
 
-    
+    this.fetchCourse();
     
   }
 
+  fetchCourse() {
+        this.dashboardService.getCodewordsList()
+        .subscribe((response : any) => {
+          let courseData = response.data;
+            console.log(courseData)
+            })
+       }
   
 
   openDialog(): void {
@@ -48,8 +83,6 @@ export class DashboardComponent implements OnInit {
   rowClicked(row: any): void {
     console.log(row);
     this.router.navigate(['/course'])
-  }
-
-  
+  }  
 
 }
