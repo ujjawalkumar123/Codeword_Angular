@@ -1,5 +1,5 @@
 <mat-card class="mat-elevation-z8">
-  <form class="example-form" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+  <form class="example-form" (ngSubmit)="onRegister(registerForm)" #registerForm="ngForm">
       <h2>Register to Codeword App</h2>
       <p class="mat-body-2" *ngIf="errFlag">Enter both email and password</p>
       
@@ -37,7 +37,19 @@
           required>
         </mat-form-field>
         <br>
-      
+        <div class="checkbox">
+            <label>
+                <input 
+                type="checkbox" 
+                name="instructor" 
+                [ngModel]="isInstructor" 
+                #instructor="ngModel"
+                >
+                Instructor?
+            </label>
+        </div>
+        <!-- ng-true-value="ofCourse" 
+        ng-false-value="iWish"      -->
       <mat-toolbar>
           <p id="quest">Already have an account?
               <a mat-button routerLink="/">Login</a></p>

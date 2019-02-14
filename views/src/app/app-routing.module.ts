@@ -8,6 +8,8 @@ import { CodewordsetComponent } from './codewordset/codewordset.component';
 import { CodewordsComponent } from './codewords/codewords.component';
 import { CourseComponent } from './course/course.component';
 import { RegisterComponent } from './register/register.component';
+import { PasswordComponent } from './password/password.component';
+
 // import { PasswordComponent } from './password/password.component';
 
 const routes: Routes = [
@@ -15,8 +17,9 @@ const routes: Routes = [
   { path: 'login' , component: LoginComponent },
   { path: 'user' , component: UserComponent },
   { path: 'register' , component: RegisterComponent },
+  { path: 'password' , component: PasswordComponent },
   // { path: 'password' , component: PasswordComponent },
-  { path: 'codewords' , component: CodewordsComponent },
+  { path: 'codewords/:id' , component: CodewordsComponent },
   { path: 'codewordset' , component: CodewordsetComponent },
   { path: 'dashboard' , component: DashboardComponent },
   { path: 'course' , component: CourseComponent },

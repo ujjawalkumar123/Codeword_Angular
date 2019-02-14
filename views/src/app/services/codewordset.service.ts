@@ -16,7 +16,7 @@ export class CodewordsetService {
             }
         })
     }
-
+//[{ CodeWordSetName: "Test001"}]
     getCodewords(data) {
         return this.httpclient.post("http://localhost:3000/codeword/getCodewords", {
             CodeWordSetKey: data

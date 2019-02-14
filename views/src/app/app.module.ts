@@ -29,6 +29,7 @@ import { AddCourseComponent, AddCourseSnackBarComponent } from './add-course/add
 import { CourseComponent } from './course/course.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { PasswordComponent } from './password/password.component';
 // import { RegisterComponent } from './register/register.component';
 // import { PasswordComponent } from './password/password.component';
 
@@ -48,7 +49,8 @@ import { RegisterComponent } from './register/register.component';
     AddCourseComponent,
     AddCourseSnackBarComponent,
     CourseComponent,
-    RegisterComponent
+    RegisterComponent,
+    PasswordComponent
     // RegisterComponent,
     // PasswordComponent
     

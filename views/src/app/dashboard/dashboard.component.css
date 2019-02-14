@@ -19,9 +19,14 @@ color: black;
     max-width: 200px;
 } */
 
+p {
+font-size: 12px;
+}
+
 mat-grid-list{
     max-width: auto;
     margin: 1em 1em auto 1em;
+    
 }
 .example-card {
     max-width: 350px;

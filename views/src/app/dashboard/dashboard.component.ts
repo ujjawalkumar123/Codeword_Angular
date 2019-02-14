@@ -49,6 +49,8 @@ export class DashboardComponent implements OnInit {
     // { heading: "Heading 5", content:"Fifth sem"},
     // { heading: "Heading 6", content:"Sixth sem"},
    ]
+
+  courseData: any;
   
 
   constructor(public dialog: MatDialog, private router: Router, private dashboardService: DashboardService) { }
@@ -64,8 +66,8 @@ export class DashboardComponent implements OnInit {
   fetchCourse() {
         this.dashboardService.getCodewordsList()
         .subscribe((response : any) => {
-          let courseData = response.data;
-            console.log(courseData)
+          this.courseData = response.data;
+            console.log(this.courseData)
             })
        }
   

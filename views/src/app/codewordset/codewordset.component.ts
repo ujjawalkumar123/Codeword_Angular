@@ -120,7 +120,7 @@ export class CodewordsetComponent implements OnInit {
   }
 
   rowClicked(row: any): void {
-    console.log(row);
-    this.router.navigate(['/codewords'])
+    console.log(row.codeWordSetName);
+    this.router.navigate(['/codewords', row.codeWordSetName]);
   }
 }

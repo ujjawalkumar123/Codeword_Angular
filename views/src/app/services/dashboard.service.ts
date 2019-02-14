@@ -27,20 +27,21 @@ export class DashboardService {
         })
     }
 
+    addNewCourse(data){
+        return this.httpclient.post("http://localhost:3000/codeword/addnewCourse",{
+            data: {
+                token: window.localStorage.getItem('token')                
+            }
+        })
+    }
 
-    CreateCourse() {}
-
-    handleFileUpload() {}
-
-    getStartDate() {}
-
-    loadCourseModel() {}
-
-    fetchCourseList() {}
-
-    getCourseName() {}
-
-    deleteCourseKey() {}
+    addCourseStudent(data){
+        return this.httpclient.post("http://localhost:3000/codeword/addcoursestudent",{
+            data: {
+                token: window.localStorage.getItem('token')                
+            }
+        })
+    }
 
     
 
