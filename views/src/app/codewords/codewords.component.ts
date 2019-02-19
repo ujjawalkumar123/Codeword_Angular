@@ -4,7 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddUserComponent } from 'src/app/add-user/add-user.component';
+// import { AddUserComponent } from 'src/app/add-user/add-user.component';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { CodewordsetService } from 'src/app/services/codewordset.service';
@@ -13,39 +13,7 @@ export interface PeriodicElement {
   codeWords: string;
  }
 
- const ELEMENT_DATA: PeriodicElement[] = [
-//    {
-//   codeWords: "Albania"
-// }, {
-//   codeWords: "Morocco"
-// }, {
-//   codeWords: "United States"
-// }, {
-//   codeWords: "Indonesia"
-// }, {
-//   codeWords: "Peru"
-// }, {
-//   codeWords: "Cape Verde"
-// }, {
-//   codeWords: "Canada"
-// }, {
-//   codeWords: "Venezuela"
-// }, {
-//   codeWords: "Kosovo"
-// }, {
-//   codeWords: "Iran"
-// }, {
-//   codeWords: "Ukraine"
-// }, {
-//   codeWords: "Sweden"
-// }, {
-//   codeWords: "Indonesia"
-// }, {
-//   codeWords: "Finland"
-// }, {
-//   codeWords: "Nigeria"
-// }
-]
+//  const ELEMENT_DATA: PeriodicElement[] = []
 
 @Component({
   selector: 'app-codewords',
@@ -54,7 +22,7 @@ export interface PeriodicElement {
 })
 export class CodewordsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'btn1', 'btn2'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = new MatTableDataSource;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

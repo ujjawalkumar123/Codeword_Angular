@@ -15,37 +15,6 @@ export interface PeriodicElement {
   items? : any
 }
 
-// const ELEMENT_DATA: PeriodicElement[] = [{
-//   codeWordSetName: "LOESTRIN 21 1.5/30",
-//   count: 92
-// }, {
-//   codeWordSetName: "Indocyanine green",
-//   count: 86
-// }, {
-//   codeWordSetName: "Promethazine Hydrochloride and Dextromethorphan Hydrobromide",
-//   count: 98
-// }, {
-//   codeWordSetName: "Colgate",
-//   count: 50
-// }, {
-//   codeWordSetName: "CAULOPHYLLUM THALICTROIDES",
-//   count: 76
-// }, {
-//   codeWordSetName: "Body Luxuries Strawberry Scented Waterless Anti Bacterial Hand gel",
-//   count: 60
-// }, {
-//   codeWordSetName: "Infla",
-//   count: 64
-// }, {
-//   codeWordSetName: "GELNIQUE",
-//   count: 92
-// }, {
-//   codeWordSetName: "Coconut",
-//   count: 88
-// }, {
-//   codeWordSetName: "Venlafaxine Hydrochloride",
-//   count: 81
-// }];
 
 @Component({
   selector: 'app-codewordset',
@@ -103,7 +72,6 @@ export class CodewordsetComponent implements OnInit {
     const dialogRef = this.dialog.open(AddUserComponent, {
       width: '500px',
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed ');
       console.log(result);

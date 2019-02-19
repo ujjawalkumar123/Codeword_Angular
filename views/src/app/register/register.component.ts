@@ -22,25 +22,25 @@ export class RegisterComponent implements OnInit {
   // }
 
  
-      email: '';
-      password: '';
-      repeatPassword: '';
-      instructor: false;
-      msg: '';
-      signed: false;
+  //     email: '';
+  //     password: '';
+  //     repeatPassword: '';
+  //     instructor: false;
+  //     msg: '';
+  //     signed: false;
    
-  validations: {
-    password: {
-      required,
-      // minLength: minLength(8)
-    },
-    repeatPassword: {
-      // sameAsPassword: sameAs('password')
-    },
-    instructor: {
-      // sameAs: sameAs(() => true)
-    }
-  }
+  // validations: {
+  //   password: {
+  //     required,
+  //     // minLength: minLength(8)
+  //   },
+  //   repeatPassword: {
+  //     // sameAsPassword: sameAs('password')
+  //   },
+  //   instructor: {
+  //     // sameAs: sameAs(() => true)
+  //   }
+  // }
   
   constructor(private router: Router,  private userService: UserService) { }
 
@@ -48,8 +48,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister(data) {
-    this.msg = ''
-    let emailid = this.email
+    // this.msg = ''
+    // let emailid = this.email
     // if (data.valid) {
       console.log(data.value);
       // return true;
@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
         .subscribe((res : any) => {
           console.log(res)
           if (!res.message.data) {
-            console.log('onregister clicked fullnaem', this.email)
+            // console.log('onregister clicked fullnaem', this.email)
             this.userService
               .signup(data.value)
               .subscribe((res : any) => {
