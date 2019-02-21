@@ -28,18 +28,25 @@ export class DashboardService {
     }
 
     addNewCourse(data){
-        return this.httpclient.post("http://localhost:3000/codeword/addnewCourse",{
-            data: {
+        return this.httpclient.post("http://localhost:3000/codeword/addnewCourse",
+            data,{
+            headers: {
                 token: window.localStorage.getItem('token')                
             }
+            
         })
     }
 
     addCourseStudent(data){
-        return this.httpclient.post("http://localhost:3000/codeword/addcoursestudent",{
-            data: {
-                token: window.localStorage.getItem('token')                
-            }
+        return this.httpclient.post("http://localhost:3000/codeword/addcoursestudent",
+            data,
+             {headers: {
+                // 'Content-Type': 'multipart/form-data',
+                token: window.localStorage.getItem('token')
+              }
+            // data: {
+            //     token: window.localStorage.getItem('token')                
+            // }
         })
     }
 
