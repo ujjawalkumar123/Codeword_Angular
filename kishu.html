@@ -1,0 +1,14 @@
+MatNativeDateModule
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" name="orderDate" [(ngModel)]="data.orderDate" #orderDate="ngModel" [value]="data.orderDate"
+        [disabled]='dialogueType' placeholder="Order date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput [matDatepicker]="picker2" name="deliveryDate" [(ngModel)]="data.deliveryDate" #deliveryDate="ngModel" [value]="data.deliveryDate"
+        [disabled]='dialogueType' placeholder="Delivery Date">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>

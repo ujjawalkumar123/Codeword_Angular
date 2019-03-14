@@ -14,6 +14,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +33,7 @@ import { CourseComponent } from './course/course.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { PasswordComponent } from './password/password.component';
+import { MatNativeDateModule } from '@angular/material/core';
 // import { RegisterComponent } from './register/register.component';
 // import { PasswordComponent } from './password/password.component';
 
@@ -72,6 +76,8 @@ import { PasswordComponent } from './password/password.component';
     MatSelectModule,
     FormsModule,
     MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HttpClientModule 
   ],
   providers: [],

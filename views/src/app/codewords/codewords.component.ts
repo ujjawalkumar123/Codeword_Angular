@@ -39,13 +39,14 @@ export class CodewordsComponent implements OnInit {
          console.log(response);
         //  this.displayedColumns = response;
          this.dataSource = new MatTableDataSource(response.data[id]);
+         this.dataSource.sort = this.sort;
+         this.dataSource.paginator = this.paginator;
         })
      
     }
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+    
   }
 
   rowClicked(row: any): void {

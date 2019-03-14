@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'codewords/:id' , component: CodewordsComponent },
   { path: 'codewordset' , component: CodewordsetComponent },
   { path: 'dashboard' , component: DashboardComponent },
-  { path: 'course' , component: CourseComponent },
+  { path: 'course/:id' , component: CourseComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
